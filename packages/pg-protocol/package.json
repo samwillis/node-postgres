@@ -3,7 +3,22 @@
   "version": "1.6.1",
   "description": "The postgres client/server binary protocol, implemented in TypeScript",
   "main": "dist/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/index.js"
+    },
+    "./messages": {
+      "import": "./dist/esm/messages.js",
+      "require": "./dist/messages.js"
+    },
+    "./parser": {
+      "import": "./dist/esm/parser.js",
+      "require": "./dist/parser.js"
+    }
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.2.7",
@@ -16,8 +31,10 @@
     "typescript": "^4.0.3"
   },
   "scripts": {
-    "test": "mocha dist/**/*.test.js",
-    "build": "tsc",
+    "test": "mocha dist/*.test.js",
+    "build": "yarn build:cjs && yarn build:esm",
+    "build:cjs": "tsc",
+    "build:esm": "tsc --project tsconfig.esm.json",
     "build:watch": "tsc --watch",
     "prepublish": "yarn build",
     "pretest": "yarn build"
@@ -29,6 +46,7 @@
   },
   "files": [
     "/dist/*{js,ts,map}",
+    "/dist/esm/*{js,ts,map}",
     "/src"
   ]
 }
