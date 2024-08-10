@@ -1,5 +1,7 @@
 //binary data writer tuned for encoding binary specific to the postgres binary protocol
 
+import { Buffer } from 'buffer'
+
 export class Writer {
   private buffer: Buffer
   private offset: number = 5

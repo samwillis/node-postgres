@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer'
+
 export type Mode = 'text' | 'binary'
 
 export type MessageName =

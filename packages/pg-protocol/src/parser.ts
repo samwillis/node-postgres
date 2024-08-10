@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer'
 import { TransformOptions } from 'stream'
 import {
   Mode,

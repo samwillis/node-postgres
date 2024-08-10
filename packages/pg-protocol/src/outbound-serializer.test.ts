@@ -1,4 +1,5 @@
 import assert from 'assert'
+import { Buffer } from 'buffer'
 import { serialize } from './serializer'
 import BufferList from './testing/buffer-list'
 
