@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer'
+
 const emptyBuffer = Buffer.allocUnsafe(0)
 
 export class BufferReader {

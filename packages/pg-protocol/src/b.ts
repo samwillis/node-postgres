@@ -1,5 +1,6 @@
 // file for microbenchmarking
 
+import { Buffer } from 'buffer'
 import { BufferReader } from './buffer-reader'
 
 const LOOPS = 1000

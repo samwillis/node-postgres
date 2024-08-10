@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer'
 import { Writer } from './buffer-writer'
 
 const enum code {

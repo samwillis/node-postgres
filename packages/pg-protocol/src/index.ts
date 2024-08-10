@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer'
 import { DatabaseError } from './messages'
 import { serialize } from './serializer'
 import { Parser, MessageCallback } from './parser'

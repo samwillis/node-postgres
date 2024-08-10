@@ -1,6 +1,7 @@
 import buffers from './testing/test-buffers'
 import BufferList from './testing/buffer-list'
 import { parse } from '.'
+import { Buffer } from 'buffer'
 import assert from 'assert'
 import { PassThrough } from 'stream'
 import { BackendMessage } from './messages'
